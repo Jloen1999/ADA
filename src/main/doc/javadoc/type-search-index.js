@@ -1,0 +1,1 @@
+typeSearchIndex = [{"p":"es.uex.cum.ada","l":"Algoritmos"},{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"es.uex.cum.ada","l":"InterfazAlgoritmos"},{"p":"es.uex.cum.ada","l":"Main"}];updateSearchResults();

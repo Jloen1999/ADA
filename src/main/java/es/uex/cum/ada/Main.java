@@ -5,11 +5,11 @@ import java.awt.*;
 import java.util.Arrays;
 
 /**
- * Práctica 1: Análisis experimental de la Eficiencia de algunos Algoritmos de Ordenación
+ * Practica 1: Analisis experimental de la Eficiencia de algunos Algoritmos de Ordenacion
  * <ul>
- *     <li>Estudiar el coste temporal real de algunos algoritmos de ordenación</li>
+ *     <li>Estudiar el coste temporal real de algunos algoritmos de ordenacion</li>
  *     <li>Los algoritmos ordenaran ascendentemente un vector de enteros de diferente tamaño</li>
- *     <li>Implementar los algoritmos de ordenación Selection sort y Bubble sort</li>
+ *     <li>Implementar los algoritmos de ordenacion Selection sort y Bubble sort</li>
  *     <li>Comparar el coste entre los algoritmos implementados y los algoritmos ya disponibles(Cocktail Sort y Bubble Sort)</li>
  *     <ul>Analizar el comportamiento temporal del algoritmo ante diferentes configuraciones de datos de entrada
  *          <li>Caso Mejor</li>
@@ -20,7 +20,7 @@ import java.util.Arrays;
  *     <li>Realizar varias mediciones para cada talla para reducir el efecto de perturbaciones en el sistema en la toma de tiempos.</li>
  * </ul>
  *
- * @author José Luis Obiang Ela Nanguang
+ * @author Jose Luis Obiang Ela Nanguang
  * @version 1.0 2024-03-18
  * {@link JFrame}, {@link JPanel}, {@link JTextArea}, {@link JTable}, {@link JScrollPane}, {@link GridLayout}, {@link BorderLayout}, {@link Algoritmos}, {@link InterfazAlgoritmos}
  */
@@ -35,13 +35,13 @@ public class Main {
         // Definir los tamaños de los arrays a ordenar
         int[] tallas = {2000, 4000, 6000, 8000, 10000, 12000, 14000, 16000, 18000, 20000};
 
-        // Definir el número de repeticiones por cada tamaño
+        // Definir el numero de repeticiones por cada tamaño
         int repeticiones = 10;
 
         // Definir los casos
         String[] casos = {"Caso Mejor", "Caso Peor", "Caso Aleatorio"};
 
-        // Array para almacenar los casos, las tallas y tiempos medios de ejecución de cada algoritmo
+        // Array para almacenar los casos, las tallas y tiempos medios de ejecucion de cada algoritmo
         String[][][] tiempos = new String[casos.length][tallas.length][al.algoritmos.length];
 
         // Iterar sobre los casos
@@ -64,7 +64,7 @@ public class Main {
                 long[] tiemposTotales = new long[al.algoritmos.length];
                 System.out.println("Talla del array: " + talla);
 
-                // Generar el array según el caso
+                // Generar el array segun el caso
                 int[] arrayOriginal = al.generarArray(talla, caso);
                 // Mostrar el array original (solo para comprobar que funciona)
                 System.out.println("Array original: " + Arrays.toString(arrayOriginal));
@@ -72,7 +72,7 @@ public class Main {
                 int[] arrayOrdenado = new int[talla];
                 // Iterar sobre las repeticiones
                 for (int l = 0; l < al.algoritmos.length; l++) {
-                    // Medir el tiempo de ejecución de cada algoritmo de ordenación
+                    // Medir el tiempo de ejecucion de cada algoritmo de ordenacion
                     long inicio = System.currentTimeMillis();
                     for (int k = 0; k < repeticiones; k++) {
                         // Ordenar el array con el algoritmo correspondiente
@@ -119,7 +119,7 @@ public class Main {
         // Mostrar los resultados finales en una tabla
         al.mostrarResultados(casos, tallas, tiempos);
 
-        JFrame frameFinal = new JFrame("Análisis experimental");
+        JFrame frameFinal = new JFrame("Analisis experimental");
         frameFinal.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         // Crear un panel principal para la ventana
         JPanel panelFinal = new JPanel(new GridLayout(1, casos.length));

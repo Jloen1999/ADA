@@ -9,7 +9,7 @@ import java.util.Random;
 
 /**
  * Interfaz que contiene todas las funciones a usar en el programa
- * @author José Luis Obiang Ela Nanguang
+ * @author Jose Luis Obiang Ela Nanguang
  * @version 1.0 2024-03-18
  */
 

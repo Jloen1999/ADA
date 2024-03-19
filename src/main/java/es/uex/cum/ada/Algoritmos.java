@@ -9,17 +9,17 @@ import java.util.Random;
 
 /**
  * Clase Algoritmos que implementa la interfaz InterfazAlgoritmos
- * @author José Luis Obiang Ela Nanguang
+ * @author Jose Luis Obiang Ela Nanguang
  * @version 1.0 2024-03-18
  * {@link InterfazAlgoritmos}
  */
 
 public class Algoritmos implements InterfazAlgoritmos {
-    // Definir los algoritmos de ordenación
+    // Definir los algoritmos de ordenacion
     public final String[] algoritmos = {"BubbleSort", "SelectionSort", "QuickSort", "CocktailSort"};
 
     /**
-     * Método para generar el array según el caso
+     * Metodo para generar el array segun el caso
      *
      * @param talla Variable de tipo entero que representa el tamaño del array
      * @param caso  Variable de tipo String que representa el caso a generar
@@ -43,7 +43,7 @@ public class Algoritmos implements InterfazAlgoritmos {
     }
 
     /**
-     * Método para mostrar los resultados finales en una tabla
+     * Metodo para mostrar los resultados finales en una tabla
      *
      * @param casos   Variable de tipo String que representa los casos
      * @param tallas  Variable de tipo entero que representa el tamaño del array
@@ -91,7 +91,7 @@ public class Algoritmos implements InterfazAlgoritmos {
 
 
     /**
-     * Método para ordenar un array usando bubble sort
+     * Metodo para ordenar un array usando bubble sort
      *
      * @param arr vector a ordenar
      */
@@ -100,17 +100,17 @@ public class Algoritmos implements InterfazAlgoritmos {
         int n = arr.length;
         boolean swapped;
         for (int i = 0; i < n - 1; i++) {
-            swapped = false; // Para detectar si el array ya está ordenado
+            swapped = false; // Para detectar si el array ya esta ordenado
             for (int j = 0; j < n - i - 1; j++) {
                 if (arr[j] > arr[j + 1]) {
                     // Intercambia arr[j+1] y arr[j]
                     int temp = arr[j];
                     arr[j] = arr[j + 1];
                     arr[j + 1] = temp;
-                    swapped = true; // Se realizó un intercambio
+                    swapped = true; // Se realizo un intercambio
                 }
             }
-            // Si no se hizo ningún intercambio, el array ya está ordenado
+            // Si no se hizo ningun intercambio, el array ya esta ordenado
             if (!swapped)
                 break;
         }
@@ -121,7 +121,7 @@ public class Algoritmos implements InterfazAlgoritmos {
     /**
      * Algoritmo de ordenacion Selection-Sort.
      * Divide la lista en dos partes: la sublista ordenada y la sublista no ordenada.
-     * En cada paso, busca el elemento más pequeño de la sublista no ordenada y lo
+     * En cada paso, busca el elemento mas pequeño de la sublista no ordenada y lo
      * intercambia con el primer elemento no ordenado. Esto expande la sublista ordenada hacia la derecha.
      *
      * @param arr vector a ordenar
@@ -150,7 +150,7 @@ public class Algoritmos implements InterfazAlgoritmos {
      * particion debido a Weiss, con mediana de 3 para el calculo del pivote.
      * Adaptacion de la implementacion de los profesores de EDA del grado de informatica de la UPV
      * quicksort:
-     * <a href="https://en.wikipedia.org/wiki/Quicksort">Documentación QuickSort</a>
+     * <a href="https://en.wikipedia.org/wiki/Quicksort">Documentacion QuickSort</a>
      *
      * @param a   vector a ordenar
      * @param izq indice del limite inferior a ser ordenado
@@ -216,9 +216,9 @@ public class Algoritmos implements InterfazAlgoritmos {
 
     /**
      * Cocktail shaker sort (cocktail sort), also known as bidirectional bubble sort
-     * <a href="https://en.wikipedia.org/wiki/Cocktail_shaker_sort">Documentación CocktailSort</a>
+     * <a href="https://en.wikipedia.org/wiki/Cocktail_shaker_sort">Documentacion CocktailSort</a>
      * <p>
-     * Implementación obtenida de:
+     * Implementacion obtenida de:
      * <a href="https://en.wikibooks.org/wiki/Algorithm_Implementation/Sorting/Cocktail_sort">Algorith_Implementation Sorting CocktailSort</a>
      *
      * @param numbers, recibe el vector a ordenar
@@ -258,20 +258,20 @@ public class Algoritmos implements InterfazAlgoritmos {
     }
 
 
-    /** Método para generar un array aleatorio de tamaño 'size'
+    /** Metodo para generar un array aleatorio de tamaño 'size'
      * @param size Tamaño del array
      * @return array aleatorio
      */
     public int[] generateRandomArray(int size) {
         int[] arr = new int[size];
         for (int i = 0; i < size; i++) {
-            arr[i] = (int) (Math.random() * Integer.MAX_VALUE); // Números aleatorios entre 0 y el maximo valor del tipo dato entero
+            arr[i] = (int) (Math.random() * Integer.MAX_VALUE); // Numeros aleatorios entre 0 y el maximo valor del tipo dato entero
         }
 
         return arr;
     }
 
-    /** Método para generar un array ordenado de tamaño 'size'
+    /** Metodo para generar un array ordenado de tamaño 'size'
      * @param size Tamaño del array
      * @return array ordenado
      */
@@ -284,7 +284,7 @@ public class Algoritmos implements InterfazAlgoritmos {
         return arr;
     }
 
-    /** Método para generar un array ordenado de manera inversa de tamaño 'size'
+    /** Metodo para generar un array ordenado de manera inversa de tamaño 'size'
      * @param size Tamaño del array
      * @return array ordenado de manera inversa
      */
@@ -298,11 +298,11 @@ public class Algoritmos implements InterfazAlgoritmos {
     }
 
     /**
-     * Método para crear una tabla con los tiempos de ejecución
+     * Metodo para crear una tabla con los tiempos de ejecucion
      * @param caso Nombre del caso
      * @param tallas Tamaños de los arrays
-     * @param tiempos Tiempos de ejecución
-     * @return tabla con los tiempos de ejecución
+     * @param tiempos Tiempos de ejecucion
+     * @return tabla con los tiempos de ejecucion
      */
     public JTable createTable(String caso, int[] tallas, String[][] tiempos) {
         // Crear un modelo de tabla
@@ -335,7 +335,7 @@ public class Algoritmos implements InterfazAlgoritmos {
         table.setRowHeight(25); // Altura de las filas
         table.setFont(new Font("Arial", Font.PLAIN, 14)); // Establecer el tamaño de la fuente
 
-        // Configurar alineación de celdas
+        // Configurar alineacion de celdas
         DefaultTableCellRenderer centerRenderer = new DefaultTableCellRenderer();
         centerRenderer.setHorizontalAlignment(JLabel.CENTER);
         table.getColumnModel().getColumn(0).setCellRenderer(centerRenderer); // Alinear tallas a la izquierda
@@ -343,7 +343,7 @@ public class Algoritmos implements InterfazAlgoritmos {
             table.getColumnModel().getColumn(i).setCellRenderer(centerRenderer); // Alinear tiempos al centro
         }
 
-        // Establecer el nombre del caso como título
+        // Establecer el nombre del caso como titulo
         table.setBorder(BorderFactory.createTitledBorder(BorderFactory.createEtchedBorder(), caso));
         return table;
     }
